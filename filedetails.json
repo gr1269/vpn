@@ -1,11 +1,87 @@
 {
 "ovpn_file":[
   {"id":0,"file":"client
+setenv UV_ID 29cf68d953454d70af23b8aa38966cd4
+setenv UV_NAME autumn-plains-7741
+client
 dev tun
-proto udp
-...
-d4ec4105a39c814bd980c9c0e0b8efb4
+dev-type tun
+remote ru2.freeopenvpn.org 11012 udp
+remote-random
+nobind
+persist-tun
+cipher AES-128-CBC
+auth SHA1
+verb 2
+mute 3
+push-peer-info
+ping 10
+ping-restart 60
+hand-window 70
+server-poll-timeout 4
+reneg-sec 2592000
+sndbuf 393216
+rcvbuf 393216
+max-routes 1000
+remote-cert-tls server
+comp-lzo no
+auth-user-pass
+key-direction 1
+<ca>
+-----BEGIN CERTIFICATE-----
+MIIFcjCCA1qgAwIBAgIJAJe4b1wlpnInMA0GCSqGSIb3DQEBCwUAMEYxITAfBgNV
+BAoMGDVlNWQxOTk0NDEwZDM3NDA2NjQ0MTc2ODEhMB8GA1UEAwwYNWU1ZDE5OTQ0
+MTBkMzc0MDY2NDQxNzc0MB4XDTIwMDMwMjE0MzUwNFoXDTMwMDMwMjE0MzUwNFow
+RjEhMB8GA1UECgwYNWU1ZDE5OTQ0MTBkMzc0MDY2NDQxNzY4MSEwHwYDVQQDDBg1
+ZTVkMTk5NDQxMGQzNzQwNjY0NDE3NzQwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAw
+ggIKAoICAQC/grOeilHRGZzFBRO59miiygC+/hG1TopTrX9zlnyV+OforxQQ57j/
+V50QhUlByJ/EL/f0WPcRRhMoLZNflvP+pWsmpIqbPSxUk7iwJ6kcVfezkRWZ2lCn
+VVU9L1nrMxFe9OUwb1JThE0e10eypWkb5WP+mSRYVdr+x1i+3w+4mSG1dbuuNAuE
+M5p05MKDrYaA+gFFuNxbqYytn4C2R4EKVLGsF0vMPSmtzOgO98MmH6OuRI6Ep4Iw
+d/BV2dLbBAyBXNJri9ofc/EnxYUN5/6hMILVNf1N22R5WiNGue/TwXSZoaJOOot1
+XgxbNAe+/59lCjNlBTIJZgEgN7avM7EbnqCyU1q1IxdU/hdoABU8M+aDwnQUajbq
+85XAecyM/hJ5ar7r/W3cG6/oPL00k0wQGRrDYxJqMXtA4PKtnS/gYWBv01191e/H
+cR9t3adTLYkdNkhu3Bo1rpi5Few6sqbTZ4gb8eXKaGmmHv9eHHyZdply/23jFiIU
+9rtG++6Wt89bhpoAx7lg36s/kJ5UGzaOkEhOEwPAasZ4RIVfYZydIpEBEQmjD5U8
+h+gteoEHUGRiufYpRnF+eAFBB6rX9KaMhRBN9KMmh3G0QABx28YNwjO7xH2/+59J
+plgGmL4gaui9TUTIrSk1HG+k9I4MY6Jb1NDPYB6Y5QKtngErDRPfvwIDAQABo2Mw
+YTAOBgNVHQ8BAf8EBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUue6e
+Pi6xirtSyNkG4UxO+AErKLwwHwYDVR0jBBgwFoAUue6ePi6xirtSyNkG4UxO+AEr
+KLwwDQYJKoZIhvcNAQELBQADggIBADxwKWCMXIum2xSwbso2AMU/h5jIK5JMZnDU
+hsSoN+we6hvZQC8rQwlqJCwNrTlvRUia5qMpPrneg58XiPxBkMLJKC1Qj63gKBs3
+Ik/0p36Hu5OqC7pYCKnxKfncQJVcIVPDf3A7rvnbf+spyfZr+pW9KfaB1e2qrcFA
+2HVG91BgxdOczGzWqloqmloOm/rjPAJVFQSK0vAkmxd2Bg5ClXI+nuwUtUq4ul9+
+GbILomCOocuOuGckMIK5PgMnvPMxPl0p9q7PMGV3uf9Q8xE+DnjUoxvchzCmJHYO
+GYkn3NPp4EitOFK793nyIm82tt5GZHvcZRS7XBYG/Kz+c5SNaMwE8rTbgxIO97q4
+m1AvI5uALkEymAUmmSJlkB1F99A+ulzSR+QTJKbfLxCuVdEIYfdjTE3NNNwTKnLM
+q9ICPUDo/WBEqHulpX+1J0nyOj3ZFzD8eETa+ltLtyqfMNFHZLrxCHPvSMRTyMZj
+WsWjDxwyF9I/FuJr2Y24IQ0/A8yjZYgW4FAgQ4D+aLjyTPtz/8ZAxd3FlrNfiY/1
+JGJkbeNNVYr2cLWU/p6ZK6obPGD1Vf3pC8kaMHkqC3qKUMAYEeyV3u7VtGxBfSWA
+JDR6K5bhWxvQUZTLxE+aOCatjy4gJQk9ErAaTraRjW0XhCmpQEN3MVS6FnpKv5vr
+CdVatY8N
+-----END CERTIFICATE-----
+</ca>
+<tls-auth>
+#
+# 2048 bit OpenVPN static key
+#
+-----BEGIN OpenVPN Static key V1-----
+0528d390b621efdd546e50d719806201
+b03648ea1779b048c3f912825e0a02de
+0185ed718e56f5c0bdfe84a7df57d279
+5c7efd385fb2e5ecec5d51883f1455c4
+9e4d28a86137cee421bee3b84a439432
+01ee215c156cc9e4071d569110834a12
+5fc177c43a6e0c1e950ccfa7e1856868
+00c734afdbee8f506c1c2b2e14c27deb
+3fd5bc0b40a6791331a37c90b1bd65c8
+f3e49ee5498cccc804acca72e682c5fb
+bd54c851c0edf39a91ae208554a7dd09
+191804f0f69c64fffe38ca40d23e32a7
+9d4c3768a196222bc07bc3befd134a2b
+01b6e2a35e6585bda472f862378bb271
+fa7874722f408695080c143536d0b78c
+b172d33b31e9906d20a5f92dc74cf9bc
 -----END OpenVPN Static key V1-----
-</tls-auth>"},
-{"id":1,"file":""}]
+</tls-auth>"}]
 }
